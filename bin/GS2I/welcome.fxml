@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="626.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GS2I.welcomeController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+      <Pane prefHeight="390.0" prefWidth="731.0" style="-fx-background-color: #2D75E8;" stylesheets="@../resources/dark-theme.css">
+         <children>
+            <Label layoutX="204.0" layoutY="146.0" text="GS2I" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="87.0" />
+               </font>
+            </Label>
+            <Label layoutX="204.0" layoutY="252.0" text="Database Mangement " textFill="WHITE">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="WHITE" glyphName="DATABASE" layoutX="121.0" layoutY="231.0" size="60" textAlignment="CENTER" />
+            <Label layoutX="20.0" layoutY="33.0" text="Welcome" textFill="WHITE">
+               <font>
+                  <Font name="Cambria" size="46.0" />
+               </font>
+            </Label>
+            <JFXButton id="get" fx:id="getStarted" buttonType="RAISED" layoutX="259.0" layoutY="386.0" onAction="#fadeAction" prefHeight="45.0" prefWidth="100.0" ripplerFill="#e8e1e1" style="-fx-background-color: white;" styleClass="get" stylesheets="@java/PROJECT/src/resources/dark-theme.css" text="Get Started" />
+         </children>
+      </Pane>
+   </children>
+</StackPane>

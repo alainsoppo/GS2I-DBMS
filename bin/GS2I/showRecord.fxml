@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="1102.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GS2I.dataController">
+   <children>
+      <Pane prefHeight="139.0" prefWidth="1102.0" style="-fx-background-color: #2D75E8;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="73.0" layoutY="30.0" text="GS2I" textFill="WHITE">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+            <Label layoutX="79.0" layoutY="91.0" text="Database Mangement " textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="WHITE" glyphName="DATABASE" layoutX="47.0" layoutY="75.0" size="30" />
+         </children>
+      </Pane>
+      <TableView fx:id="table" layoutX="20.0" layoutY="192.0" prefHeight="349.0" prefWidth="1066.0" stylesheets="@../resources/dark-theme.css" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="192.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="36.0" text="id" />
+          <TableColumn fx:id="Entry_Date" prefWidth="673.0" text="Entry Date" />
+            <TableColumn fx:id="Company" prefWidth="75.0" text="Company" />
+            <TableColumn fx:id="Brand" prefWidth="36.0" text="Brand" />
+            <TableColumn fx:id="Serial_Number" prefWidth="36.0" text="Serial Number" />
+            <TableColumn fx:id="Problem" prefWidth="673.0" text="Problem" />
+            <TableColumn fx:id="Return_Date" prefWidth="673.0" text="Return Date" />
+            <TableColumn fx:id="Diagnostics" prefWidth="673.0" text="Diagnostics" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Pane layoutX="20.0" layoutY="153.0" prefHeight="27.0" prefWidth="322.0">
+         <children>
+            <Button defaultButton="true" layoutY="-1.0" mnemonicParsing="false" onAction="#backHome" prefHeight="27.0" prefWidth="73.0" stylesheets="@../resources/dark-theme.css" text="back" />
+            <FontAwesomeIconView fill="#3019ff" glyphName="ARROW_LEFT" layoutX="8.0" layoutY="18.0" text="" wrappingWidth="12.285714149475098" />
+         </children></Pane>
+      <TextField fx:id="seachbar" layoutX="865.0" layoutY="152.0" prefHeight="27.0" prefWidth="209.0" promptText="Search Company..." style="-fx-border-color: WHITE;" />
+      <Button fx:id="search" layoutX="1008.0" layoutY="153.0" mnemonicParsing="false" onAction="#searchData" prefHeight="31.0" prefWidth="82.0" stylesheets="@../resources/dark-theme.css" text="search">
+         <graphic>
+            <FontAwesomeIconView fill="#2d75e8" glyphName="SEARCH" />
+         </graphic>
+      </Button>
+      <Button fx:id="reload" defaultButton="true" layoutX="366.0" layoutY="153.0" mnemonicParsing="false" onAction="#reloadData" prefHeight="31.0" prefWidth="130.0" stylesheets="@../resources/dark-theme.css" text="Reload Data" textFill="#1e1e1e" />
+      <Button fx:id="delete" layoutX="504.0" layoutY="153.0" mnemonicParsing="false" onAction="#deleteData" prefHeight="31.0" prefWidth="90.0" stylesheets="@../resources/dark-theme.css" text="delete" />
+      <FontAwesomeIconView fill="#e54a2e" glyphName="TRASH" layoutX="512.0" layoutY="172.0" />
+      <FontAwesomeIconView fill="#002de1" glyphName="REFRESH" layoutX="373.0" layoutY="172.0" />
+   </children>
+</AnchorPane>

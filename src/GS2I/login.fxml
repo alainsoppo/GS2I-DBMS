@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stack" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GS2I.loginController">
+   <children>
+      <VBox fx:id="vBox" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <AnchorPane id="AnchorPane" fx:id="anchorpane" prefHeight="400.0" prefWidth="457.0" style="-fx-background-color: #2D75E8;" stylesheets="@../resources/dark-theme.css">
+               <children>
+                  <JFXTextField fx:id="username" focusColor="WHITE" labelFloat="true" layoutX="101.0" layoutY="118.0" prefHeight="37.0" prefWidth="464.0" promptText="Username" styleClass="text" stylesheets="@../resources/dark-theme.css">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <unFocusColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </unFocusColor>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="password" focusColor="WHITE" labelFloat="true" layoutX="97.0" layoutY="194.0" onAction="#handleLoginButtonAction" prefHeight="38.0" prefWidth="471.0" promptText="Password" stylesheets="@../resources/dark-theme.css">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <unFocusColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </unFocusColor>
+                  </JFXPasswordField>
+                  <JFXButton layoutX="153.0" layoutY="270.0" onAction="#handleLoginButtonAction" prefHeight="40.0" prefWidth="90.0" styleClass="login-button" text="Login" textFill="#1416a4" />
+                  <JFXButton layoutX="408.0" layoutY="270.0" onAction="#handleCancelButtonAction" prefHeight="40.0" prefWidth="90.0" styleClass="login-button" text="Cancel" textFill="#1416a4" />
+                  <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="64.0" layoutY="149.0" size="25" />
+                  <FontAwesomeIconView fill="#fafaff" glyphName="KEY" layoutX="64.0" layoutY="224.0" size="25" text="" />
+                  <Label layoutX="257.0" layoutY="20.0" text="GS2I" textFill="#f8f8f8">
+                     <font>
+                        <Font size="48.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="352.0" text="New User?" textFill="#fffdfd">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="gotoRegister" layoutX="91.0" layoutY="344.0" onAction="#go_to_Reg" style="-fx-background-color: #2D75E8;" text="Sign Up" textFill="#ad5634" underline="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <FontAwesomeIconView fill="WHITE" glyphName="DATABASE" layoutX="218.0" layoutY="70.0" size="40" />
+               </children>
+            </AnchorPane>
+         </children>
+         <stylesheets>
+            <URL value="@../resources/dark-theme.css" />
+            <URL value="@../resources/dark-theme.css" />
+         </stylesheets>
+      </VBox>
+   </children>
+</StackPane>

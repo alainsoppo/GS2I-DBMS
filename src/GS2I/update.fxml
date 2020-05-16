@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="rootPane" prefHeight="735.0" prefWidth="1325.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GS2I.updateController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="mainContainer" prefHeight="986.0" prefWidth="1325.0" style="-fx-background-color: #FFF;" StackPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="824.0" prefWidth="1231.0" style="-fx-background-color: #DFDFDFD;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button fx:id="saveButton" layoutX="507.0" layoutY="665.0" mnemonicParsing="false" onAction="#addMember" prefHeight="32.0" prefWidth="311.0" text="Save">
+                     <textFill>
+                        <LinearGradient endX="0.7952380952380952" endY="1.0" startX="0.9619047619047619" startY="0.21904761904761905">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="#3235db" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <font>
+                        <Font name="Calibri Bold" size="12.0" />
+                     </font></Button>
+                  <TextField fx:id="cn" layoutX="31.0" layoutY="382.0" prefHeight="0.0" prefWidth="800.0" promptText="New Company Name" style="-fx-border-style: SOLID;">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="b" layoutX="32.0" layoutY="329.0" prefHeight="0.0" prefWidth="800.0" promptText="New Brand" style="-fx-border-style: SOLID;">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="sn" layoutX="31.0" layoutY="436.0" prefHeight="0.0" prefWidth="800.0" promptText="New Serial Number" style="-fx-border-style: SOLID;">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                  </TextField>
+                  <TextArea fx:id="pb" layoutX="32.0" layoutY="232.0" prefHeight="84.0" prefWidth="800.0" promptText="New Problem Description" style="-fx-border-style: SOLID;">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                  </TextArea>
+                  <TextArea fx:id="diag" layoutX="31.0" layoutY="539.0" prefHeight="104.0" prefWidth="800.0" promptText="New Diagnosis carried out" style="-fx-border-style: SOLID;">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                  </TextArea>
+                  <DatePicker fx:id="ed" layoutX="205.0" layoutY="181.0" prefHeight="37.0" prefWidth="203.0" style="-fx-border-style: SOLID;" />
+                  <Button id="addbtn" fx:id="cancelButton" layoutX="31.0" layoutY="665.0" mnemonicParsing="false" onAction="#back" prefHeight="32.0" prefWidth="311.0" text="Back">
+                     <textFill>
+                        <LinearGradient endX="0.7952380952380952" endY="1.0" startX="0.9619047619047619" startY="0.21904761904761905">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="#3235db" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <font>
+                        <Font name="Calibri Bold" size="12.0" />
+                     </font></Button>
+                  <Label layoutX="37.0" layoutY="181.0" prefHeight="37.0" prefWidth="153.0" style="-fx-background-color: white;" text="New Entry Date :">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="0.9714285714285714" endY="1.0" startX="0.9619047619047619">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="#0505f5" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <DatePicker fx:id="rd" layoutX="211.0" layoutY="485.0" prefHeight="37.0" prefWidth="192.0" style="-fx-border-style: SOLID;" />
+                  <Label layoutX="32.0" layoutY="485.0" prefHeight="37.0" prefWidth="163.0" style="-fx-background-color: white;" text="New Return Date :">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="0.9714285714285714" endY="1.0" startX="0.9619047619047619">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="#0505f5" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <TextField fx:id="oldID" layoutX="461.0" layoutY="180.0" prefHeight="32.0" prefWidth="357.0" promptText="ID of record to modify" style="-fx-border-style: SOLID; -fx-border-color: red;">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                     <effect>
+                        <Glow level="0.0" />
+                     </effect>
+                  </TextField>
+               </children>
+               <effect>
+                  <Blend />
+               </effect>
+            </Pane>
+            <Pane prefHeight="173.0" prefWidth="980.0" style="-fx-background-color: #2D75E8;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="130.0" layoutY="44.0" text="GS2I" textFill="WHITE">
+                     <font>
+                        <Font size="48.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="136.0" layoutY="105.0" text="Database Mangement " textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView glyphName="DATABASE" layoutX="53.0" layoutY="103.0" size="60">
+                     <fill>
+                        <LinearGradient endX="0.7952380952380952" endY="0.3095238095238094" startX="0.9619047619047619" startY="0.6761904761904762">
+                           <stops>
+                              <Stop color="BLACK" />
+                              <Stop color="#fff2f2" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </FontAwesomeIconView>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="943.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GS2I.homeController">
+   <children>
+      <Pane fx:id="header" prefHeight="173.0" prefWidth="980.0" style="-fx-background-color: #2D75E8;" stylesheets="@../resources/dark-theme.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="130.0" layoutY="44.0" text="GS2I" textFill="WHITE">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+            <Label layoutX="136.0" layoutY="105.0" text="Database Mangement " textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="WHITE" glyphName="DATABASE" layoutX="53.0" layoutY="103.0" size="60" />
+         </children>
+      </Pane>
+      <GridPane alignment="CENTER" hgap="10.0" layoutX="165.0" layoutY="228.0" prefHeight="320.0" prefWidth="650.0" vgap="10.0" AnchorPane.leftAnchor="165.0" AnchorPane.rightAnchor="165.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="190.0" minHeight="10.0" prefHeight="159.0" valignment="TOP" vgrow="ALWAYS" />
+          <RowConstraints maxHeight="156.0" minHeight="10.0" prefHeight="151.0" valignment="BOTTOM" vgrow="ALWAYS" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="btnDashboard" contentDisplay="TOP" mnemonicParsing="false" onAction="#showTables" prefHeight="181.0" prefWidth="242.0" stylesheets="@../resources/dark-theme.css" text="Database">
+               <graphic>
+                  <FontAwesomeIconView fx:id="showData" fill="#2d75e8" glyphName="DATABASE" size="50" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnRecord" contentDisplay="TOP" mnemonicParsing="false" onAction="#addRecord" prefHeight="181.0" prefWidth="242.0" stylesheets="@../resources/dark-theme.css" text="Add record" GridPane.columnIndex="1">
+               <graphic>
+                  <FontAwesomeIconView fx:id="addData" fill="#2d75e8" glyphName="PLUS" size="50" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="produce" contentDisplay="TOP" mnemonicParsing="false" onAction="#ProduceScore" prefHeight="181.0" prefWidth="242.0" stylesheets="@../resources/dark-theme.css" text="Produce Tracking Sheet" GridPane.columnIndex="2">
+               <graphic>
+                  <FontAwesomeIconView fx:id="deleteData" fill="#2d75e8" glyphName="BOOKMARK" size="50" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="aboutMe" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="181.0" prefWidth="242.0" stylesheets="@../resources/dark-theme.css" text="Query Database" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <graphic>
+                  <FontAwesomeIconView fx:id="about" fill="#2d75e8" glyphName="QUESTION" size="50" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnUpdate" contentDisplay="TOP" mnemonicParsing="false" onAction="#update" prefHeight="181.0" prefWidth="242.0" stylesheets="@../resources/dark-theme.css" text="Update Record" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <graphic>
+                  <FontAwesomeIconView fx:id="updateData" fill="#2d75e8" glyphName="EXCHANGE" size="50" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnClasses" contentDisplay="TOP" mnemonicParsing="false" onAction="#logout" prefHeight="181.0" prefWidth="242.0" stylesheets="@../resources/dark-theme.css" text="Logout" GridPane.rowIndex="1">
+               <graphic>
+                  <FontAwesomeIconView fill="#2d75e8" glyphName="SIGN_OUT" size="50" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
